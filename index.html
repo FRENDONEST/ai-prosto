@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- говорим браузеру, что это современный HTML5 -->
+<html lang="ru" data-zcode-design> <!-- язык страницы — русский; data-атрибут — служебная метка редактора, можно удалить -->
+
+<head>
+  <!-- Служебная часть страницы: в ней ничего не видно, но она важна -->
+  <meta charset="UTF-8">                  <!-- кодировка: чтобы русский текст не превратился в «кракозябры» -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- на телефоне страница показывается в реальном масштабе -->
+  <title>ИИ просто — шпаргалка про искусственный интеллект</title> <!-- надпись на вкладке браузера -->
+
+  <!-- Подключаем файл стилей, который лежит рядом с этой страницей -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ШАПКА: логотип и меню -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">ai<span>.</span></a> <!-- span — точка после логотипа, её покрасим в CSS -->
+      <nav class="nav">
+        <a href="#what">Что такое ИИ</a>  <!-- якорные ссылки: ведут к секциям с такими же id -->
+        <a href="#how">Как работает</a>
+        <a href="#agents">Субагенты</a>
+        <a href="#net">ИИ и интернет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ГЛАВНЫЙ ЭКРАН: первое, что видит посетитель -->
+    <section class="hero">
+      <div class="container">
+        <span class="badge">учебная шпаргалка</span>
+        <h1>Искусственный интеллект — это&nbsp;просто</h1> <!-- &nbsp; — неразрывный пробел, слова не разъедутся на новую строку -->
+        <p class="hero__text">Что такое ИИ, как он учится на примерах, кто такие субагенты и почему интернет уже не будет прежним — коротко и по-человечески.</p>
+        <a href="#what" class="button">Начать читать</a>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 1: ЧТО ТАКОЕ ИИ -->
+    <section class="section" id="what">
+      <div class="container">
+        <h2>Что такое ИИ</h2>
+        <p class="lead">Обычная программа выполняет правила, которые заранее записал человек. ИИ устроен иначе: он сам находит закономерности на примерах — поэтому отвечает даже на вопросы, которых не было в его «учебнике».</p>
+        <ul class="facts">
+          <li><b>Чат-боты</b> — объясняют тему и пишут тексты</li>
+          <li><b>Нейросети</b> — рисуют картинку по описанию</li>
+          <li><b>Переводчики</b> — переводят почти как живой человек</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 2: КАК ОН РАБОТАЕТ -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2>Как он работает</h2>
+        <p class="lead">Три шага объясняют почти всё.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="card__num">01</span>
+            <h3>Данные</h3>
+            <p>Модель читает огромные объёмы текстов, картинок и звуков из интернета — это её «учебники».</p>
+          </article>
+          <article class="card">
+            <span class="card__num">02</span>
+            <h3>Обучение</h3>
+            <p>ИИ находит закономерности: какие слова встречаются рядом, как связаны образы и значения.</p>
+          </article>
+          <article class="card">
+            <span class="card__num">03</span>
+            <h3>Ответ</h3>
+            <p>На вопрос он собирает ответ по выученным закономерностям — слово за словом, за доли секунды.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 3: СУБАГЕНТЫ -->
+    <section class="section section--tinted" id="agents">
+      <div class="container">
+        <h2>Субагенты</h2>
+        <p class="lead">Современные ИИ-ассистенты работают не в одиночку, а командой. Главный агент получает задачу и раздаёт её субагентам — помощникам, у каждого из которых своя специальность.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="card__icon">
+              <!-- иконка — маленькая SVG-картинка, нарисованная линиями прямо в коде -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="2" x2="9" y2="5"/><line x1="15" y1="2" x2="15" y2="5"/><line x1="9" y1="19" x2="9" y2="22"/><line x1="15" y1="19" x2="15" y2="22"/><line x1="2" y1="9" x2="5" y2="9"/><line x1="2" y1="15" x2="5" y2="15"/><line x1="19" y1="9" x2="22" y2="9"/><line x1="19" y1="15" x2="22" y2="15"/></svg>
+            </span>
+            <h3>Главный агент</h3>
+            <p>Принимает задачу, делит её на части и собирает итоговый результат.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+            </span>
+            <h3>Субагент-поисковик</h3>
+            <p>Ищет нужную информацию в интернете и приносит её «шефу».</p>
+          </article>
+          <article class="card">
+            <span class="card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg>
+            </span>
+            <h3>Субагент-исполнитель</h3>
+            <p>Делает конкретную работу: пишет текст, код или считает цифры.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 4: ИИ И ИНТЕРНЕТ -->
+    <section class="section" id="net">
+      <div class="container">
+        <h2>ИИ и интернет</h2>
+        <p class="lead">Интернет уже невозможно представить без ИИ — вот четыре примера, с которыми вы встречаетесь каждый день.</p>
+        <ul class="facts">
+          <li><b>Поиск</b> — поисковик всё чаще отвечает готовым текстом, а не списком ссылок</li>
+          <li><b>Лента</b> — музыка и видео подбираются алгоритмами под ваш вкус</li>
+          <li><b>Перевод</b> — любая страница читается на родном языке</li>
+          <li><b>Защита</b> — фильтры спама и фишинговых писем тоже работают на ИИ</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПОДВАЛ: нижняя часть сайта -->
+  <footer class="footer">
+    <div class="container">
+      <p>Учебный сайт про ИИ · сделан на HTML и CSS · 2026</p>
+    </div>
+  </footer>
+</body>
+
+</html>
